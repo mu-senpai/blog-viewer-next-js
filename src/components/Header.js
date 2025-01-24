@@ -30,25 +30,24 @@ export default function Header() {
   return (
     <header className="bg-gray-800 text-white p-4">
       <nav className="flex justify-between">
+        <Link href="/" className="text-2xl font-bold hover:underline">BlogViewer</Link>
         <div className="flex space-x-4">
           <Link href="/" className="hover:underline">
             Home
           </Link>
           {
             user ? <Link href="/profile" className="hover:underline">
-            Profile
-          </Link>
-          : <LoginLink>Profile</LoginLink>
+              Profile
+            </Link>
+              : <LoginLink>Profile</LoginLink>
           }
-        </div>
-        <div>
           {authenticatedUser ? (
             <>
               <span className="mr-4">Welcome, {authenticatedUser.given_name || "User"}</span>
               <LogoutLink className="hover:underline">Logout</LogoutLink>
             </>
           ) : (
-            <div className="space-x-3">
+            <div className="space-x-4">
               <LoginLink postLoginRedirectURL="/profile" className="hover:underline">
                 Login
               </LoginLink>
