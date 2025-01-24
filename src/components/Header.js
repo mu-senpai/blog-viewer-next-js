@@ -34,9 +34,12 @@ export default function Header() {
           <Link href="/" className="hover:underline">
             Home
           </Link>
-          <Link href="/profile" className="hover:underline">
+          {
+            user ? <Link href="/profile" className="hover:underline">
             Profile
           </Link>
+          : <LoginLink>Profile</LoginLink>
+          }
         </div>
         <div>
           {authenticatedUser ? (

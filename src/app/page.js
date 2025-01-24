@@ -1,4 +1,5 @@
-import BlogList from "@/components/BlogList";
+import BlogCard from "@/components/BlogCard";
+// import BlogList from "@/components/BlogList";
 
 async function fetchPosts() {
   const res = await fetch('https://jsonplaceholder.typicode.com/posts');
@@ -12,8 +13,8 @@ export default async function Home() {
 
   return (
     <main className="min-h-screen p-8">
-      <h1 className="text-3xl font-bold mb-6">Blog Posts</h1>
-      <BlogList posts={posts.slice(0, 10)} />
+      <h1 className="text-3xl font-bold mb-6 text-center">Blog Posts</h1>
+      <BlogCard posts={posts.slice(0, 10)} />
     </main>
   );
 }
