@@ -39,7 +39,7 @@ export default function Header() {
             user ? <Link href="/profile" className="hover:underline">
               Profile
             </Link>
-              : <LoginLink>Profile</LoginLink>
+              : <LoginLink className="hover:underline">Profile</LoginLink>
           }
           {authenticatedUser ? (
             <>
