@@ -29,7 +29,7 @@ export default function Header() {
 
   return (
     <header className="bg-gray-800 text-white p-4">
-      <nav className="flex justify-between">
+      <nav className="flex items-center justify-between">
         <Link href="/" className="text-2xl font-bold hover:underline">BlogViewer</Link>
         <div className="flex space-x-4">
           <Link href="/" className="hover:underline">
